@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>效果三</title>
+	<style type="text/css">
+		body{
+			width:100%;
+			height: 100%;
+			overflow: hidden;
+			animation: sky 35s linear infinite;
+		}
+		.cloud {
+			position: absolute;
+			top: 80px;
+			left: 0;
+			width: 100%;
+			height: 499px;
+		}
+		.cloud.one {
+			background: url('./images/cloud_one.png') repeat-x;
+			background-size: contain;
+			animation: flutter 24s linear infinite;
+			z-index: 3
+		}
+		.cloud.two {
+			background: url('./images/cloud_two.png') repeat-x;
+			background-size: contain;
+			animation: flutter 20s linear infinite;
+			z-index: 2
+		}
+		.cloud.three {
+			background: url('./images/cloud_three.png') repeat-x;
+			background-size: contain;
+			animation: flutter 28s linear infinite;
+			z-index: 1
+		}
+		@keyframes flutter {
+			0% {
+				background-position: 0 0;
+			}
+			100% {
+				background-position: -1477px 0;
+			}
+		}
+		@keyframes sky {
+			0% {
+				background-color: #010d1a;
+			}
+			50% {
+				background-color: #007aca;
+			}
+			100% {
+				background-color: #010d1a;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div id="cloud_three" class="cloud three"></div>
+	<div id="cloud_two" class="cloud two"></div>
+	<div id="cloud_one" class="cloud one"></div>
+</body>
+</html>
